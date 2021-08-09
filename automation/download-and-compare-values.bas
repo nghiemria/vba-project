@@ -263,8 +263,8 @@ ActiveWorkbook.SaveAs ("O:\GMR\Processes\Germany\M_Agency_Lending_Deutsche_Bank\
 
 With outemail
 
-.To = "frankfurtglobalsettlement2@bnpparibas.com"
-.CC = "AG-Verletzungen@allianzgi.de"
+.To = "dummy@bnpparibas.com"
+.CC = "AG-Verletzungen@dummy.de"
 .Subject = "Depotbestände AGI WP Leihe Coll Depots"
 .HTMLBody = "Dear sir/madam!<p>We found discrepancy while reconcile internally your figures with Deutsche Bank figures.<p>The ISIN number below and the amount, which is shown in Deutsche Bank does not exists  in BNP records. <p> Account ID: 41329975721030029033X<p>Could you please take a look at the file and come back to us as soon as possible?<p>Thanks in advance!"
 .Attachments.Add ActiveWorkbook.FullName
@@ -282,8 +282,8 @@ ActiveWorkbook.SaveAs ("O:\GMR\Processes\Germany\M_Agency_Lending_Deutsche_Bank\
 
 With outemail
 
-.To = "amcm@hsbc.de"
-.CC = "AG-Verletzungen@allianzgi.de"
+.To = "dummy@hsbc.de"
+.CC = "AG-Verletzungen@dummy.de"
 .Subject = "Depotbestände AGI WP Leihe Coll Depots"
 .HTMLBody = "Dear sir/madam!<p>We found discrepancy while reconcile internally your figures with Deutsche Bank figures.<p>The ISIN number below and the amount, which is shown in Deutsche Bank does not exists  in HSBC records.<p>Could you please take a look at the issue and come bakc to us as soon as possible?<p>Thanks in advance!"
 .Attachments.Add ActiveWorkbook.FullName
@@ -301,8 +301,8 @@ ActiveWorkbook.SaveAs ("O:\GMR\Processes\Germany\M_Agency_Lending_Deutsche_Bank\
 
 With outemail
 
-.To = "pk-depotbank@sparkasse-koelnbonn.de"
-.CC = "AG-Verletzungen@allianzgi.de"
+.To = "pk-dummy@sparkasse-koelnbonn.de"
+.CC = "AG-Verletzungen@dummy.de"
 .Subject = "Depotbestände AGI WP Leihe Coll Depots"
 .HTMLBody = "Dear sir/madam!<p>We found discrepancy while reconcile internally your figures with Deutsche Bank figures.<p>The ISIN number below and the amount, which is shown in Deutsche Bank does not exists  in Sparkasse records.<p>Could you please take a look at the issue and come bakc to us as soon as possible?<p>Thanks in advance!"
 .Attachments.Add ActiveWorkbook.FullName
