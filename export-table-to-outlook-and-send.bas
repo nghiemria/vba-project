@@ -148,45 +148,14 @@ Sub SEND_ACTIVE_REMINDER()
     
     For f = 1 To lastrow5
    
-    If Cells(f, 2).Value = "Resmer, Hubert" Then
-    Cells(f, 3).Value = "Hubert.Resmer@allianzgi.com"
+    If Cells(f, 2).Value = "Last 1, First 1" Then
+    Cells(f, 3).Value = "last1.first1@dummy.com"
     Else
-    If Cells(f, 2).Value = "Kakou, Didier" Then
-    Cells(f, 3).Value = "didier.kakou@allianzgi.com"
-    Else
-    If Cells(f, 2).Value = "Panesar, Tina" Then
-    Cells(f, 3).Value = "Tina.Panesar@allianzgi.com"
-    Else
-    If Cells(f, 2).Value = "Blaettermann, Daniel" Then
-    Cells(f, 3).Value = "Ext.Daniel.Blaettermann@allianzgi.com"
-    Else
-    If Cells(f, 2).Value = "Dupasquier, Marcel" Then
-    Cells(f, 3).Value = "Marcel.Dupasquier@allianzgi.com"
-    Else
-    If Cells(f, 2).Value = "Unger, Heike" Then
-    Cells(f, 3).Value = "Heike.Unger@allianzgi.com"
-    Else
-    If Cells(f, 2).Value = "Latifova, Saida" Then
-    Cells(f, 3).Value = "Saida.Latifova@allianzgi.com"
-    Else
-    If Cells(f, 2).Value = "Kotzem, Andreas" Then
-    Cells(f, 3).Value = "Andreas.Kotzem@allianzgi.com"
-    Else
-    If Cells(f, 2).Value = "Spik, Franciszek" Then
-    Cells(f, 3).Value = "Franciszek.Spik@allianzgi.com"
-    If Cells(f, 2).Value = "Kosovan, Pavlo" Then
-    Cells(f, 3).Value = "Pavlo.Kosovan@allianzgi.com"
-    End If
-    End If
-    End If
-    End If
-    End If
-    End If
-    End If
-    End If
-    End If
-    End If
+    If Cells(f, 2).Value = "Last 1, First 1" Then
+    Cells(f, 3).Value = "last1.first1@dummy.com"
     
+    End if
+    End if
     Next f
         
     ' Format the final table
@@ -322,9 +291,9 @@ Sub SEND_ACTIVE_REMINDER()
 
     ' Create a html text file
 
-    fso.CreateTextFile ("O:\GMR\Processes\Downloads\Vügar\Working Student\Active Breach Reminder\test.html")
+    fso.CreateTextFile ("O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Active Breach Reminder\test.html")
 
-    wb.PublishObjects.Add(xlSourceRange, "O:\GMR\Processes\Downloads\Vügar\Working Student\Active Breach Reminder\test.html", wb.Sheets(1).name, wb.Sheets(1).Range(Cells(1, 1), Cells(lastrowfinal, 2)).Address, xlHtmlStatic).Publish (True)
+    wb.PublishObjects.Add(xlSourceRange, "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Active Breach Reminder\test.html", wb.Sheets(1).name, wb.Sheets(1).Range(Cells(1, 1), Cells(lastrowfinal, 2)).Address, xlHtmlStatic).Publish (True)
     
     
     ' Convert table into variable
@@ -332,7 +301,7 @@ Sub SEND_ACTIVE_REMINDER()
     Dim table As Variant
 
     Dim MyFile As Scripting.TextStream
-    Set MyFile = fso.OpenTextFile("O:\GMR\Processes\Downloads\Vügar\Working Student\Active Breach Reminder\test.html")
+    Set MyFile = fso.OpenTextFile("O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Active Breach Reminder\test.html")
 
     table = MyFile.ReadAll
 
@@ -363,7 +332,7 @@ Sub SEND_ACTIVE_REMINDER()
        
 
         .To = distb
-        .CC = "Guideline_Monitoring_Reporting@allianzgi.com"
+        .CC = "Guideline_Monitoring_Reporting@dummy.com"
         .Subject = "Active Breach Reminder - " & Date
         .HTMLBody = "Dear colleagues,<p>Please find below table <b>ACTIVE breaches</b> which are to be reviewed / commented by <b>today</b>:<p>" & "<table align = left>" & table & "<p>Regards, Victoria Nghiem"
         .Importance = olImportanceHigh
@@ -386,7 +355,7 @@ Dim IE As New SHDocVw.InternetExplorer
 
 IE.Visible = True
 
-IE.Navigate "https://archer.allianzgi.com/apps/ArcherApp/Home.aspx"
+IE.Navigate "https://archer.blank.com/apps/ArcherApp/Home.aspx"
 
 
 '
