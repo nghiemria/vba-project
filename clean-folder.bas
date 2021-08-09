@@ -19,8 +19,8 @@ Dim ShellApp As Object
 Set ShellApp = CreateObject("Shell.Application")
 Set ol = New Outlook.Application
 Set ns = ol.GetNamespace("MAPI")
-Set fol = ns.GetDefaultFolder(olPublicFoldersAllPublicFolders).Folders("AllianzGI KAG").Folders("Units").Folders("Guideline Monitoring").Folders("Surveillance@allianzgi.de")
-Set fol1 = ns.GetDefaultFolder(olPublicFoldersAllPublicFolders).Folders("AllianzGI KAG").Folders("Gruppenfaxe").Folders("IC").Folders("Ueberwachung (Fax 14822)")
+Set fol = ns.GetDefaultFolder(olPublicFoldersAllPublicFolders).Folders("KAG").Folders("Units").Folders("Guideline Monitoring").Folders("Surveillance@dummy.de")
+Set fol1 = ns.GetDefaultFolder(olPublicFoldersAllPublicFolders).Folders("KAG").Folders("Gruppenfaxe").Folders("IC").Folders("Ueberwachung (Fax 14822)")
 Dim d As Date
 Dim day As Integer
 d = Date
@@ -46,7 +46,7 @@ For Each i In fol1.Items
                 
                 For Each at In mi.Attachments
                 
-                     at.SaveAsFile "O:\GMR\Processes\Downloads\Vügar\Working Student\Thresholds\" & at.Filename
+                     at.SaveAsFile "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Thresholds\" & at.Filename
                             
                 Next at
                 
@@ -69,7 +69,7 @@ For Each i In fol.Items
                 
                 For Each at In mi.Attachments
                 
-                     at.SaveAsFile "O:\GMR\Processes\Downloads\Vügar\Working Student\Money Market\" & at.Filename
+                     at.SaveAsFile "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Money Market\" & at.Filename
                             
                 Next at
                 
@@ -79,11 +79,11 @@ For Each i In fol.Items
         
       'HSBC_____________
          
-        If mi.ReceivedTime > d And mi.Subject = "Depotbestände AGI WP Leihe Coll Depots" And mi.Attachments.Count > 0 Then
+        If mi.ReceivedTime > d And mi.Subject = "DepotbestÃ¤nde AGI WP Leihe Coll Depots" And mi.Attachments.Count > 0 Then
                 
                 For Each at In mi.Attachments
                 
-                     at.SaveAsFile "O:\GMR\Processes\Downloads\Vügar\Working Student\HSBC\" & at.Filename
+                     at.SaveAsFile "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\HSBC\" & at.Filename
                             
                 Next at
                 
@@ -93,7 +93,7 @@ For Each i In fol.Items
                 
                 For Each at In mi.Attachments
                 
-                     at.SaveAsFile "O:\GMR\Processes\Downloads\Vügar\Working Student\HSBC\" & at.Filename
+                     at.SaveAsFile "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\HSBC\" & at.Filename
                             
                 Next at
                 
@@ -105,7 +105,7 @@ For Each i In fol.Items
                 
                 For Each at In mi.Attachments
                 
-                     at.SaveAsFile "O:\GMR\Processes\Downloads\Vügar\Working Student\BNP\" & at.Filename
+                     at.SaveAsFile "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\BNP\" & at.Filename
                             
                 Next at
                 
@@ -115,7 +115,7 @@ For Each i In fol.Items
                 
                 For Each at In mi.Attachments
                 
-                     at.SaveAsFile "O:\GMR\Processes\Downloads\Vügar\Working Student\BNP\" & at.Filename
+                     at.SaveAsFile "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\BNP\" & at.Filename
                             
                 Next at
                 
@@ -128,7 +128,7 @@ For Each i In fol.Items
                 
                 For Each at In mi.Attachments
                 
-                     at.SaveAsFile "O:\GMR\Processes\Downloads\Vügar\Working Student\Sparkasse\" & at.Filename
+                     at.SaveAsFile "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Sparkasse\" & at.Filename
                             
                 Next at
                 
@@ -151,7 +151,7 @@ If day = 1 Then
                 
                 For Each at In mi.Attachments
                 
-                     at.SaveAsFile "O:\GMR\Processes\Downloads\Vügar\Working Student\Technical Alerts\" & at.Filename
+                     at.SaveAsFile "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Technical Alerts\" & at.Filename
                             
                 Next at
                 
@@ -168,7 +168,7 @@ Else
                 
                 For Each at In mi.Attachments
                 
-                     at.SaveAsFile "O:\GMR\Processes\Downloads\Vügar\Working Student\Technical Alerts\" & at.Filename
+                     at.SaveAsFile "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Technical Alerts\" & at.Filename
                             
                 Next at
                 
@@ -186,17 +186,17 @@ Next i
 
 ' UNZIP HSBC ZIP FILES. THIS IS NECESSARY FOR THE AGENCY LENGING RECONCILIATION FOR THE HSBC
 
-ShellApp.Namespace("O:\GMR\Processes\Downloads\Vügar\Working Student\HSBC\Files for HSBC").CopyHere ShellApp.Namespace("O:\GMR\Processes\Downloads\Vügar\Working Student\HSBC\AgencyLendingReports14726.zip").Items
+ShellApp.Namespace("O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\HSBC\Files for HSBC").CopyHere ShellApp.Namespace("O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\HSBC\AgencyLendingReports14726.zip").Items
 
 
 ' UNZIP BNP ZIP FILES. THIS IS NECESSARY FOR THE AGENCY LENGING RECONCILIATION FOR THE BNP
 
-ShellApp.Namespace("O:\GMR\Processes\Downloads\Vügar\Working Student\BNP\Files for BNP").CopyHere ShellApp.Namespace("O:\GMR\Processes\Downloads\Vügar\Working Student\BNP\AgencyLendingReports14486.zip").Items
+ShellApp.Namespace("O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\BNP\Files for BNP").CopyHere ShellApp.Namespace("O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\BNP\AgencyLendingReports14486.zip").Items
 
 
 ' UNZIP SpK ZIP FILES. THIS IS NECESSARY FOR THE AGENCY LENGING RECONCILIATION FOR THE SpK
 
-ShellApp.Namespace("O:\GMR\Processes\Downloads\Vügar\Working Student\Sparkasse\Files for Sparkasse").CopyHere ShellApp.Namespace("O:\GMR\Processes\Downloads\Vügar\Working Student\Sparkasse\AgencyLendingReports11101.zip").Items
+ShellApp.Namespace("O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Sparkasse\Files for Sparkasse").CopyHere ShellApp.Namespace("O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Sparkasse\AgencyLendingReports11101.zip").Items
 
 
 
@@ -220,17 +220,17 @@ Application.StatusBar = "Please wait while macro deletes all attachments from th
 
 
 On Error Resume Next
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\HSBC\*.*"
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\HSBC\Files for HSBC\*.*"
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\BNP\*.*"
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\BNP\Files for BNP\*.*"
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\Sparkasse\*.*"
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\Sparkasse\Files for Sparkasse\*.*"
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\Money Market\*.*"
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\Thresholds\*.*"
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\Technical Alerts\*.*"
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\Long-Lasting Technicals\*.*"
-Kill "O:\GMR\Processes\Downloads\Vügar\Working Student\Active Breach Reminder\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\HSBC\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\HSBC\Files for HSBC\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\BNP\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\BNP\Files for BNP\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Sparkasse\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Sparkasse\Files for Sparkasse\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Money Market\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Thresholds\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Technical Alerts\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Long-Lasting Technicals\*.*"
+Kill "O:\GMR\Processes\Downloads\VÃ¼gar\Working Student\Active Breach Reminder\*.*"
 On Error GoTo 0
 
 
@@ -265,7 +265,7 @@ With outemail
 
 .To = "frankfurtglobalsettlement2@bnpparibas.com"
 .CC = "AG-Verletzungen@allianzgi.de"
-.Subject = "Depotbestände AGI WP Leihe Coll Depots"
+.Subject = "DepotbestÃ¤nde AGI WP Leihe Coll Depots"
 .HTMLBody = "Dear sir/madam!<p>We found discrepancy while reconcile internally your figures with Deutsche Bank figures.<p>The ISIN number below and the amount, which is shown in Deutsche Bank does not exists  in BNP records. <p> Account ID: 41329975721030029033X<p>Could you please take a look at the file and come back to us as soon as possible?<p>Thanks in advance!"
 .Attachments.Add ActiveWorkbook.FullName
 .Display
@@ -284,7 +284,7 @@ With outemail
 
 .To = "amcm@hsbc.de"
 .CC = "AG-Verletzungen@allianzgi.de"
-.Subject = "Depotbestände AGI WP Leihe Coll Depots"
+.Subject = "DepotbestÃ¤nde AGI WP Leihe Coll Depots"
 .HTMLBody = "Dear sir/madam!<p>We found discrepancy while reconcile internally your figures with Deutsche Bank figures.<p>The ISIN number below and the amount, which is shown in Deutsche Bank does not exists  in HSBC records.<p>Could you please take a look at the issue and come bakc to us as soon as possible?<p>Thanks in advance!"
 .Attachments.Add ActiveWorkbook.FullName
 .Display
@@ -296,14 +296,14 @@ End If
 
 If Len(name) = 22 Then
 
-ActiveWorkbook.SaveAs ("O:\GMR\Processes\Germany\M_Agency_Lending_Deutsche_Bank\Agency Lending\SpK KölnB\SpK KölnB_" & Format(Now(), "YYYYMMDD") & "v1" & ".xls")
+ActiveWorkbook.SaveAs ("O:\GMR\Processes\Germany\M_Agency_Lending_Deutsche_Bank\Agency Lending\SpK KÃ¶lnB\SpK KÃ¶lnB_" & Format(Now(), "YYYYMMDD") & "v1" & ".xls")
 
 
 With outemail
 
 .To = "pk-depotbank@sparkasse-koelnbonn.de"
 .CC = "AG-Verletzungen@allianzgi.de"
-.Subject = "Depotbestände AGI WP Leihe Coll Depots"
+.Subject = "DepotbestÃ¤nde AGI WP Leihe Coll Depots"
 .HTMLBody = "Dear sir/madam!<p>We found discrepancy while reconcile internally your figures with Deutsche Bank figures.<p>The ISIN number below and the amount, which is shown in Deutsche Bank does not exists  in Sparkasse records.<p>Could you please take a look at the issue and come bakc to us as soon as possible?<p>Thanks in advance!"
 .Attachments.Add ActiveWorkbook.FullName
 .Display
